@@ -2,7 +2,7 @@
 import requests
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
-
+import pprint
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -13,9 +13,16 @@ def index():
     city = 'Dallas'
 
     r = requests.get(url.format(city)).json()
-    print(r)
+    pprint.pprint(r)
 
+    weather = {
+        'name': city,
+        'temperature': r['main']['temp'],
+        'description': r['weather'][0]['description'],
+        'icon': r['weather'][0]['icon']
+    }
 
-    return render_template('weather.html')
+    pprint.pprint(weather)
+    return render_template('weather.html', weather=weather)
 
 
