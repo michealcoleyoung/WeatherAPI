@@ -8,9 +8,27 @@
 </head>
 <body>
 
-	<div class="derp">
-	<h1 class="jumbotron text-center">Weather API</h1>
-	</div>
+
+	<div class="app-header">
+		<h1 class="text-center">Weather API</h1>
+	</div><br><br>
+
+	<div class="input-group mb-3 col-md-4 mx-auto">
+  <input type="text" class="form-control" placeholder="Add another city" aria-label="Recipient's username" aria-describedby="button-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-primary" type="button" id="button-addon2">Add City
+    </button>
+  </div>
+</div><br><br>
+
+<div class="card mx-auto" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ weather.name }}</h5>
+    <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image" class="weather-image">
+    <h6 class="card-subtitle mb-2 text-muted">{{ weather.temperature }}</h6>
+    <p class="card-text">{{ weather.description }}</p>
+  </div>
+</div>
 
 
 </body>

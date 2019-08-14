@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 import pprint
 
 app = Flask(__name__)
-app.config['DEBUG'] = True
+app.config['DEBUG'] = False
 
 @app.route('/')
 def index():

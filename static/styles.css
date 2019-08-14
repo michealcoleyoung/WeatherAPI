@@ -1,3 +1,9 @@
-.derp {
-	color: #00C4A7;
+.app-header {
+	background-color: #00C4A7;
+	color: white;
+	padding: 40px;
+}
+
+.card {
+	box-shadow: 5px 5px 5px;
 }
