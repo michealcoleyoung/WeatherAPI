@@ -21,8 +21,7 @@ def index():
     weather_data = []
 
     for city in cities:
-
-        url = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=9505be1fdbed303d342537db528a8c23'
+        url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=9505be1fdbed303d342537db528a8c23'
         r = requests.get(url.format(city.name)).json()
 
         print(r)
